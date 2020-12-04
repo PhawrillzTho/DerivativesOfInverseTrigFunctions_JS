@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+  <link rel="icon" href="https://i.ibb.co/PcGCsCh/derivative.png">
+</head>
+
+<style>
+#div_01 {
+  position: absolute;
+  left: 100px;
+  top: 950px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+#div_02 {
+  position: absolute;
+  left: 225px;
+  top: 950px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+#div_03 {
+  position: absolute;
+  left: 362px;
+  top: 950px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+#div_04 {
+  position: absolute;
+  left: 464px;
+  top: 950px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+#div_05 {
+  position: absolute;
+  left: 566px;
+  top: 950px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+#div_06 {
+  position: absolute;
+  left: 728px;
+  top: 950px;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+#mydivheader {
+  padding: 5px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 50px;
+}
+
+#matchblock > img {
+  margin-left: 50px;
+}
+
+#result {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+
+</style>
+
+<body>
+<h1>Derivatives of Inverse Trigonometric Functions</h1>
+<p>Match the derivitive functions with the appropriate inverse Trigonometric function.</p>
+
+<div id="matchblock">
+  <img src="https://i.ibb.co/kXKXNDd/matchblock.png" border="2" height="750" width="268">
+</div>
+
+<p><button class="button" type="button" onclick="getProp()">Check my work...</button>
+   <button class="button" type="button" onClick="window.location.reload();">Reset Page</button> </p>
+
+<div id="div_01">
+  <div id="mydivheader">Drag to move</div>
+  <img src="https://i.ibb.co/nQ1J6zZ/01.png" alt="01" border="1">
+</div>
+
+<div id="div_02">
+  <div id="mydivheader">Drag to move</div>
+  <img src="https://i.ibb.co/h2F1ZWV/02.png" alt="01" border="1">
+</div>
+
+<div id="div_03">
+  <div id="mydivheader">Drag to move</div>
+  <img src="https://i.ibb.co/mNSMD4b/03.png" alt="01" border="1">
+</div>
+
+<div id="div_04">
+  <div id="mydivheader">Drag to move</div>
+  <img src="https://i.ibb.co/Bs8GFwr/04.png" alt="01" border="1">
+</div>
+
+<div id="div_05">
+  <div id="mydivheader">Drag to move</div>
+  <img src="https://i.ibb.co/VD20QG7/05.png" alt="01" border="1">
+</div>
+
+<div id="div_06">
+  <div id="mydivheader">Drag to move</div>
+  <img src="https://i.ibb.co/BC0jk7t/06.png" alt="01" border="1">
+</div>
+
+<div id="result">
+  <p id="test"></p>
+</div>
+
+<script>
+dragElement(document.getElementById("div_01"));
+dragElement(document.getElementById("div_02"));
+dragElement(document.getElementById("div_03"));
+dragElement(document.getElementById("div_04"));
+dragElement(document.getElementById("div_05"));
+dragElement(document.getElementById("div_06"));
+
+function getProp() {
+  var a = document.getElementById("div_01").style.top + " " + document.getElementById("div_01").style.left;
+  var b = document.getElementById("div_02").style.top + " " + document.getElementById("div_02").style.left;
+  var c = document.getElementById("div_03").style.top + " " + document.getElementById("div_03").style.left;
+  var d = document.getElementById("div_04").style.top + " " + document.getElementById("div_04").style.left;
+  var e = document.getElementById("div_05").style.top + " " + document.getElementById("div_05").style.left;
+  var f = document.getElementById("div_06").style.top + " " + document.getElementById("div_06").style.left;
+
+  var a_top_result = a.substring(0, 3);
+  var a_left_result = a.substring(6, 9);
+  var b_top_result = b.substring(0, 3);
+  var b_left_result = b.substring(6, 9);
+  var c_top_result = c.substring(0, 3);
+  var c_left_result = c.substring(6, 9);
+  var d_top_result = d.substring(0, 3);
+  var d_left_result = d.substring(6, 9);
+  var e_top_result = e.substring(0, 3);
+  var e_left_result = e.substring(6, 9);
+  var f_top_result = f.substring(0, 3);
+  var f_left_result = f.substring(6, 9);
+
+if((a_top_result<176 && a_top_result>113) && (a_left_result<550 && a_left_result>311)){a_result = "SUCCESS";} else {a_result = "FAIL";}
+if((b_top_result<309 && b_top_result>234) && (b_left_result<550 && b_left_result>311)){b_result = "SUCCESS";} else {b_result = "FAIL";}
+if((c_top_result<432 && c_top_result>361) && (c_left_result<550 && c_left_result>311)){c_result = "SUCCESS";} else {c_result = "FAIL";}
+if((d_top_result<546 && d_top_result>489) && (d_left_result<550 && d_left_result>311)){d_result = "SUCCESS";} else {d_result = "FAIL";}
+if((e_top_result<683 && e_top_result>605) && (e_left_result<550 && e_left_result>311)){e_result = "SUCCESS";} else {e_result = "FAIL";}
+if((f_top_result<800 && f_top_result>720) && (f_left_result<550 && f_left_result>311)){f_result = "SUCCESS";} else {f_result = "FAIL";}
+
+result = "<b>A result: </b>" + a_result + "<b> - B result: </b>" + b_result + "<b> - C result: </b>" + c_result + "<b> - D result: </b>" + d_result + "<b> - E result: </b>" + e_result + "<b> - F result: </b>" + f_result;
+  document.getElementById("test").innerHTML = result;
+}
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+</body>
+</html>
